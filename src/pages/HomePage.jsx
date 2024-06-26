@@ -4,6 +4,7 @@ import JobMarquee from "../components/quickLinks/JobMarquee";
 import NewsMarquee from "../components/quickLinks/NewsMarquee";
 import PrivateJobsHome from "../components/homePageComp/PrivateJobsHome";
 import SarkariJobsHome from "../components/homePageComp/SarkariJobsHome";
+import TopResultsHome from "../components/homePageComp/TopResultsHome";
 
 const HomePage = () => {
   return (
@@ -28,6 +29,7 @@ const HomePage = () => {
 
         <div className="hidden lg:flex border-2 w-1/4">advs</div>
       </div>
+      <TopResultsHome />
     </div>
   );
 };
