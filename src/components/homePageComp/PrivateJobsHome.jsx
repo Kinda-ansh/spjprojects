@@ -90,7 +90,7 @@ const PrivateJobsHome = () => {
           </div>
         </div>
         <div>
-          <p className="flex items-center gap-2 mt-5 text-sarkari text-base font-medium">
+          <p className="flex items-center gap-2 mt-5 text-private text-base font-medium">
             Show all jobs <IoArrowForwardOutline />
           </p>
         </div>
