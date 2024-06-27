@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://13.200.213.41:8081/api/v1"; // Your base URL here
+const baseURL = "https://dev.sarkariprivatejobs.in/api/v1"; // Your base URL here
 
 console.log(baseURL);
 const axiosInstance = axios.create({

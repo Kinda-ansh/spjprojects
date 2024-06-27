@@ -25,13 +25,11 @@ const NewsList = () => {
 
           <li className="text-primary">7 min read</li>
         </div>
-      
       </div>
 
       <div className="flex">
         <img src={newsimg} alt="" width="full" height="full" />
       </div>
-    
     </div>
   );
 };
