@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 // const NavTop = lazy(() => import("../../assets/navtpo.png"));
-import NavTop from "../../assets/navtpo.png";
+import NavTop from "../../assets/navtop.gif";
 
 const NavTopAdv = () => {
   return (

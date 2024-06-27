@@ -9,32 +9,28 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { date } from "zod";
+import { IoArrowForwardOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const dummyData = [
   {
-    title: "Result 1",
-    description:
-      "This is the description for result 1. Congratulations to all the successful candidates.",
+    title: "Rajasthan Board Class 10th Result 2024",
+    date: "Date : 3 Days Ago",
+    url: "https://google.com",
   },
   {
-    title: "Result 2",
-    description:
-      "This is the description for result 2. Best wishes for your future endeavors.",
+    title: "Rajasthan Board Class 10th Result 2024",
+    date: "Date : 3 Days Ago",
+    url: "https://facebook.com",
   },
   {
-    title: "Result 3",
-    description:
-      "This is the description for result 3. Keep up the great work and aim higher.",
+    title: "Rajasthan Board Class 10th Result 2024",
+    date: "Date : 3 Days Ago",
   },
   {
-    title: "Result 4",
-    description:
-      "This is the description for result 4. Your hard work has paid off.",
-  },
-  {
-    title: "Result 5",
-    description:
-      "This is the description for result 5. Continue to strive for excellence.",
+    title: "Rajasthan Board Class 10th Result 2024",
+    date: "Date : 3 Days Ago",
   },
 ];
 
@@ -50,35 +46,47 @@ const TopResultsHome = () => {
           result website.
         </p>
       </div>
-
-      <Carousel
-        opts={{
-          align: "start",
-        }}
-        plugins={[
-          Autoplay({
-            delay: 2000,
-          }),
-        ]}
-        className="w-full max-w-sm"
-      >
-        <CarouselContent>
-          {dummyData.map((data, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex flex-col items-center justify-center p-6">
-                    <h2 className="text-xl font-bold mb-2">{data.title}</h2>
-                    <p className="text-center">{data.description}</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
+      <div className="ml-20 mr-20 ">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+            }),
+          ]}
+          className="w-[400px] lg:w-full "
+        >
+          <CarouselContent>
+            {dummyData.map((data, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex flex-col items-start justify-center  p-6">
+                      <a href={data.url} target="_main">
+                        <h2 className="text-xl font-bold mb-2 text-[#25324B]">
+                          {data.title}
+                        </h2>
+                      </a>
+                      <p className="text-center">{data.date}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+      <div>
+        <Link to="/results">
+          <p className="flex items-center gap-2 mt-5 text-sarkari text-base font-medium">
+            See All Results <IoArrowForwardOutline />
+          </p>
+        </Link>
+      </div>
     </div>
   );
 };
