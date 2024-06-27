@@ -20,6 +20,7 @@ const AdmitCard = lazy(() => import("../pages/AdmitCard"));
 const FaqPage = lazy(() => import("../pages/FaqPage"));
 const PrivacyPolicy = lazy(() => import("../pages/PrivacyPolicy"));
 const ContactUs = lazy(() => import("../pages/ContactUs"));
+const AboutUs = lazy(() => import("../pages/AboutUs"));
 
 // ================ 👆 importing component with LAZY 👆 =====================
 
@@ -38,8 +39,8 @@ const Router = ({ children }) => {
           <Route path="/faqs" element={<FaqPage />} />
           <Route path="/contact-page" element={<ContactUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="*" element={<ErrorPage/>} />
-
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </>
     )

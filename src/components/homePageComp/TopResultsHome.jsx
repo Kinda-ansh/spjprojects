@@ -15,22 +15,35 @@ import { Link } from "react-router-dom";
 
 const dummyData = [
   {
-    title: "Rajasthan Board Class 10th Result 2024",
-    date: "Date : 3 Days Ago",
-    url: "https://google.com",
+    title: "UPBED 2024 Entrance Result",
+    date: "Date : 2 Days Ago",
+    url: "https://cdn3.digialm.com/EForms/configuredHtml/1936/87908/login.html",
   },
   {
-    title: "Rajasthan Board Class 10th Result 2024",
+    title: "Chandigarh JBT Teacher Result 2024",
     date: "Date : 3 Days Ago",
-    url: "https://facebook.com",
+    url: "https://www.sarkariresult.com/2024/chandigarh-jbt-teacher-06-2023/",
   },
   {
-    title: "Rajasthan Board Class 10th Result 2024",
-    date: "Date : 3 Days Ago",
+    title: "UP CNET 2024 Result, Online Counseling",
+    date: "Date : 4 Days Ago",
+    url: "https://abvmucet2024.co.in/",
   },
   {
-    title: "Rajasthan Board Class 10th Result 2024",
+    title: "UPCATET 2024 Entrance Exam Result",
     date: "Date : 3 Days Ago",
+    url: "https://upcatet.org/frm_student_login.aspx",
+  },
+  {
+    title: "UIIC AO Final Result 2024",
+    date: "Date : 3 Days Ago",
+    url:
+      "https://uiic.co.in/sites/default/files/uploads/recruitment/LIST_OF_PROVISIONALLY_SHORTLISTED_CANDIDATES.pdf",
+  },
+  {
+    title: "UPSC CDS II 2023 OTA Final Result",
+    date: "Date : 4 Days Ago",
+    url: "https://www.sarkariresult.com/upsc/upsc-cds-ii-2023/",
   },
 ];
 
@@ -56,7 +69,7 @@ const TopResultsHome = () => {
               delay: 2000,
             }),
           ]}
-          className="w-[350px] lg:w-full "
+          className="w-[320px] lg:w-full "
         >
           <CarouselContent>
             {dummyData.map((data, index) => (
