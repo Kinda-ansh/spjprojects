@@ -9,9 +9,9 @@ const ContactFrom = () => {
   return (
     <>
     
-    <div className='flex flex-col max-w-md p-4 rounded-lg min-w-96 '>
+    <div className='flex flex-col max-w-md p-4 rounded-lg w-full '>
         <p className='font-medium text-xl'>Send us a message</p>
-        <div className=' bg-gray-50 p-4'>
+        <div className='p-4'>
           <form className='py-6 flex  flex-col leading-3 '>
             <label className='text-xl'>Your name</label> <br />
             <input className='outline-none border-gray-500 rounded-xl focus:border-none  ' type="text" /> <br />
@@ -20,7 +20,7 @@ const ContactFrom = () => {
             <label className='text-xl'>Subject</label> <br />
             <input className='outline-none border-gray-500 rounded-xl focus:border-none ' type="text" /> <br />
             <label className='text-xl '>Your message (optional)</label> <br />
-            <textarea className='outline-none border-gray-500 rounded-xl focus:border-none   max-w-96 h-52'></textarea> <br />
+            <textarea className='outline-none border-gray-500 rounded-xl focus:border-none ' rows="10"></textarea> <br />
             <Button className="w-full mt-6 rounded-3xl bg-divyang hover:bg-divyang  text-white " onClick={handelSubmit}>Submit</Button>
           </form>
         </div>

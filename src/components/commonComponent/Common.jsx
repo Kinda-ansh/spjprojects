@@ -24,7 +24,7 @@ const Common = ({ data }) => {
               />
             </div>
             <div>
-              <h2 className="w-full text-xl font-bold">
+              <h2 className="w-full text-xl">
                 {key.jobtitle.substring(0, 90)}
                 {key.jobtitle.length > 90 && "..."}
               </h2>

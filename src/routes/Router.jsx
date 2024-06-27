@@ -6,6 +6,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import AppLayout from "../layout/Layout";
+import ErrorPage from "../pages/ErrorPage";
 
 // ================ 👇 importing component with LAZY 👇  =====================
 
@@ -16,6 +17,9 @@ const Results = lazy(() => import("../pages/Results"));
 const LatestNews = lazy(() => import("../pages/LatestNews"));
 const AnswerKey = lazy(() => import("../pages/AnswerKey"));
 const AdmitCard = lazy(() => import("../pages/AdmitCard"));
+const FaqPage = lazy(() => import("../pages/FaqPage"));
+const PrivacyPolicy = lazy(() => import("../pages/PrivacyPolicy"));
+const ContactUs = lazy(() => import("../pages/ContactUs"));
 
 // ================ 👆 importing component with LAZY 👆 =====================
 
@@ -31,6 +35,11 @@ const Router = ({ children }) => {
           <Route path="/latest-news" element={<LatestNews />} />
           <Route path="/answer-key" element={<AnswerKey />} />
           <Route path="/admit-card" element={<AdmitCard />} />
+          <Route path="/faqs" element={<FaqPage />} />
+          <Route path="/contact-page" element={<ContactUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="*" element={<ErrorPage/>} />
+
         </Route>
       </>
     )
