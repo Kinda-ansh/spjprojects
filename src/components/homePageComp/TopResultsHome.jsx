@@ -56,7 +56,7 @@ const TopResultsHome = () => {
               delay: 2000,
             }),
           ]}
-          className="w-[400px] lg:w-full "
+          className="w-[350px] lg:w-full "
         >
           <CarouselContent>
             {dummyData.map((data, index) => (
