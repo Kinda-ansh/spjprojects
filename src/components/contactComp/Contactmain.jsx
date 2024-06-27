@@ -10,8 +10,8 @@ const Contactmain = () => {
         <p className="text-center text-base font-bold text-slate-500 ">Have a question or need more information?
           Just drop us a line!</p>
       </div>
-      <div className='flex flex-wrap lg:flex-nowrap justify-between p-5  gap-y-10 ' >
-        <ContactAddress />
+      <div className='w-full ' >
+        {/* <ContactAddress /> */}
         <ContactFrom />
       </div>
 

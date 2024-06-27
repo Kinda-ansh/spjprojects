@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PrivateJob from "../components/privateJobs/PrivateJob";
 import axiosInstance from "../utils/axiosConfig";
+import Loading from "../components/loading/Loading";
 
 const PrivateJobs = () => {
   const [data, setData] = useState([]);
@@ -49,7 +50,7 @@ const PrivateJobs = () => {
         {/* data portion */}
         <div className="lg:w-3/4">
           <PrivateJob data={data} />
-          {loading && <p className="text-center">Loading...</p>}
+          {loading && <p className="text-center"> <Loading/> </p>}
           {!loading && hasMore && (
             <div className="text-center my-4">
               <button

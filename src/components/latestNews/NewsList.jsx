@@ -6,7 +6,7 @@ const NewsList = ({data}) => {
   if (!data || data.length === 0) {
     return <Loading />; // Replace with your loading component
   }
-  console.log(data)
+
   return (
     <>
     {data?.map((key, index) => (
@@ -19,14 +19,10 @@ const NewsList = ({data}) => {
         </h2>
         <p>
         {key.description.substring(0, 250)}
-        {key.description.length > 250 && "..."}.. <a href="" className="text-primary">read more</a>
+        {key.description.length > 250 && "..."} <a href="" className="text-primary hover:text-bold hover:text-gray-900">read more</a>
         </p>
 
         <div className="flex flex-wrap gap-3">
-          <div className="flex">
-            <img src="" alt="" />
-            <p className="text-primary">By : {key.writtenby}</p>
-          </div>
 
           <li className="text-primary">{key.readtime}</li>
         </div>

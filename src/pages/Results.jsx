@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Common from "../components/commonComponent/Common";
 import axiosInstance from "../utils/axiosConfig";
+import Loading from "../components/loading/Loading";
 
 const Results = () => {
   const [data, setData] = useState([]);
@@ -53,19 +54,19 @@ const Results = () => {
             <p className="text-center">No data available</p>
           )}
           <Common data={data} />
-          {loading && <p className="text-center">Loading...</p>}
+          {loading && <p className="text-center"><Loading/></p>}
           {!loading && hasMore && (
             <div className="text-center my-4">
               <button
                 onClick={handleLoadMore}
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="border-primary text-primary hover:text-white border-2 px-5 rounded-md py-2 hover:bg-primary text-sm"
               >
                 Load More
               </button>
             </div>
           )}
           {!loading && !hasMore && data.length > 0 && (
-            <p className="text-center">No more data available</p>
+            <p className="text-center py-5">No more data available</p>
           )}
         </div>
         {/* advertisement partion.. hidden on small screen */}
