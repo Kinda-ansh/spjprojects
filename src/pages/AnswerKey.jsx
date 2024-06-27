@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Common from "../components/commonComponent/Common";
 import axiosInstance from "../utils/axiosConfig";
+import Loading from "../components/loading/Loading";
 
 const AnswerKey = () => {
   const [data, setData] = useState([]);
@@ -53,7 +54,7 @@ const AnswerKey = () => {
             <p className="text-center">No data available</p>
           )}
           <Common data={data} />
-          {loading && <p className="text-center">Loading...</p>}
+          {loading && <p className="text-center"> <Loading/> </p>}
           {!loading && hasMore && (
             <div className="text-center my-4">
               <button

@@ -3,6 +3,12 @@ import ptvIcon from "../../assets/pvt.svg";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Loading from "../loading/Loading";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 const PrivateJobsHome = ({ data }) => {
   if (!data || data.length === 0) {
@@ -38,16 +44,59 @@ const PrivateJobsHome = ({ data }) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-end ml-10">
-                  <button className="bg-privatebg text-private p-2 rounded-md hover:bg-private hover:text-white">
-                    <a
-                      href={key.joburl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View
-                    </a>
-                  </button>
+                <div className="flex justify-end ml-10 ">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className="border-primary text-primary hover:text-white border-2 hover:bg-primary text-sm"
+                      >
+                        View
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[425px]">
+                      <div className="py-3">
+                        <h2 className="text-primary text-2xl">
+                          {key.jobtitle}
+                        </h2>
+                      
+                        <p className="text-md">{key.jobdescription}</p>
+                      </div>
+
+                      <div className="w-full items-start  gap-5">
+                        <div className="flex gap-3 items-center">
+                          <p>Location</p>
+                          <span className="text-gray-500 ml-auto">
+                          {key.joblocation}
+                          </span>
+                        </div>
+                        <div className="flex gap-3 items-center">
+                          <p>salary</p>
+                          <span className="text-gray-500 ml-auto">
+                            {key.salary}
+                          </span>
+                        </div>
+                        <div className="flex gap-3 items-center">
+                          <p>Post-date</p>
+                          <span className="text-gray-500 ml-auto">
+                            {key.postdate}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="w-full flex justify-center items-center mt-5">
+                        <button className="border-primary text-primary hover:text-white border-2 px-5 rounded-md py-2 hover:bg-primary text-sm">
+                          <a
+                            href={key.joburl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Apply Job
+                          </a>
+                        </button>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </div>

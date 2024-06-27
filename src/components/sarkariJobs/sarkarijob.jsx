@@ -38,7 +38,7 @@ const SarkariJob = ({ data }) => {
                 </div>
                 {!isExpanded && (
                   <div>
-                    <button className="bg-sarkaribg text-lg text-sarkari px-4 py-2 hover:bg-white rounded-md">
+                    <button className="border-primary text-primary hover:text-white border-2 px-5 rounded-md py-2 hover:bg-primary text-sm">
                       View
                     </button>
                   </div>
@@ -82,7 +82,7 @@ const SarkariJob = ({ data }) => {
                 </div>
               </div>
               <div className="w-full flex justify-center items-center mt-10">
-                <button className="bg-sarkaribg text-lg text-sarkari px-4 py-2 hover:bg-[#05CFC3] hover:text-white rounded-md">
+                <button className="border-primary text-primary hover:text-white border-2 px-5 rounded-md py-2 hover:bg-primary text-sm">
                   <a
                     href={key.joburl}
                     target="_blank"
