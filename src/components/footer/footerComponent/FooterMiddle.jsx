@@ -18,12 +18,11 @@ const FooterMiddle = () => {
             </a>
             <div className="mt-6 lg:max-w-xl">
               <p className="text-lg text-gray-800">
-                Sarkari Private Jobs is a career platform connecting employers
-                and candidates. We make no particular recommendations for any
-                job or employer. We do not charge any fees or guarantee job
-                placements and do not give any references. We reserve the right
-                to take strict action for any wrongful activity conducted by any
-                person.
+                At Sarkari Private Jobs, we believe in empowering job seekers
+                with the knowledge and tools they need to succeed. Our vision is
+                to become the most trusted and comprehensive job portal, known
+                for our commitment to accuracy, reliability, and user
+                satisfaction.
               </p>
               <br />
             </div>
@@ -39,7 +38,10 @@ const FooterMiddle = () => {
               >
                 Jobs
               </Link>
-              <Link to="/faqs" className="text-lg mt-1 text-gray-500 hover:text-divyang">
+              <Link
+                to="/faqs"
+                className="text-lg mt-1 text-gray-500 hover:text-divyang"
+              >
                 FAQ
               </Link>
               <Link
@@ -48,8 +50,18 @@ const FooterMiddle = () => {
               >
                 Contact us
               </Link>
-             
-              <Link to="/privacy-policy" className="text-lg mt-1 text-gray-500 hover:text-divyang">
+
+              <Link
+                to="/about-us"
+                className="text-lg mt-1 text-gray-500 hover:text-divyang"
+              >
+                About us
+              </Link>
+
+              <Link
+                to="/privacy-policy"
+                className="text-lg mt-1 text-gray-500 hover:text-divyang"
+              >
                 Privacy Policy
               </Link>
             </div>

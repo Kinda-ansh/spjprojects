@@ -28,14 +28,14 @@ const HomePage = () => {
   const govData = data.Governmentjobs;
   const pvtData = data.Privatejobs;
   const NewsMarque = data.LatestNewsMarque;
-  const govMarque = data.GovernmentJobsMarque;
+  const govMarque = data.GovernmentjobsMarque;
   const results = data.JobResults;
 
   return (
     <div>
-      <JobMarquee />
+      <JobMarquee data={govMarque} />
       <NavBtmAdv />
-      <NewsMarquee />
+      <NewsMarquee data={NewsMarque} />
       {/* <div className="flex justify-between items-center">
         
         ################### Ads Section ###################
@@ -51,7 +51,7 @@ const HomePage = () => {
           <PrivateJobsHome data={pvtData} />
         </div>
 
-        <div className="hidden lg:flex border-2 w-1/4">advs</div>
+        <div className="hidden lg:flex border-2 w-1/4">Advertisement</div>
       </div>
       <TopResultsHome />
 
