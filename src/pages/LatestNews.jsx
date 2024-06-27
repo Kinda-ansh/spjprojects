@@ -9,7 +9,7 @@ const LatestNews = () => {
   const fetchNews = async () => {
     try {
       const response = await axiosInstance.get("/news");
-      setData(response.data.TotalNews);
+      setData(response.data.data.TotalNews);
     } catch (error) {
       console.log(error);
     }
@@ -19,14 +19,11 @@ const LatestNews = () => {
     fetchNews();
   }, []);
 
-  console.log("@@@@@@@@@@@@@@@@@@@@");
-  console.log(data);
-
   return (
     <>
       <div className="my-8">
         <img src={newsAds} alt="news page ads" />
-        <h1 className="text-lg font-semibold text-primary">
+        <h1 className="text-lg font-semibold text-primary mt-5">
           Trending Jobs News
         </h1>
       </div>
@@ -34,7 +31,7 @@ const LatestNews = () => {
       <div className="w-full flex gap-5">
         {/* data portion */}
         <div className="lg:w-3/4">
-          <NewsList />
+          <NewsList data={data}/>
         </div>
 
         {/* advertisement partion.. hidden on small screen */}

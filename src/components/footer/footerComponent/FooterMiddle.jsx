@@ -34,27 +34,22 @@ const FooterMiddle = () => {
                 Useful Links
               </p>
               <Link
-                to="jobs"
+                to="/sarkari-jobs"
                 className="text-lg mt-1 text-gray-500 hover:text-divyang"
               >
                 Jobs
               </Link>
-              <Link className="text-lg mt-1 text-gray-500 hover:text-divyang">
+              <Link to="/faqs" className="text-lg mt-1 text-gray-500 hover:text-divyang">
                 FAQ
               </Link>
               <Link
-                to="contact"
+                to="/contact-page"
                 className="text-lg mt-1 text-gray-500 hover:text-divyang"
               >
                 Contact us
               </Link>
-              <Link
-                to="founder"
-                className="text-lg mt-1 text-gray-500 hover:text-divyang"
-              >
-                Founders Note
-              </Link>
-              <Link className="text-lg mt-1 text-gray-500 hover:text-divyang">
+             
+              <Link to="/privacy-policy" className="text-lg mt-1 text-gray-500 hover:text-divyang">
                 Privacy Policy
               </Link>
             </div>
