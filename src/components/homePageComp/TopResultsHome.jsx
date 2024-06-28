@@ -12,42 +12,13 @@ import Autoplay from "embla-carousel-autoplay";
 import { date } from "zod";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Loading from "../loading/Loading";
 
-const dummyData = [
-  {
-    title: "UPBED 2024 Entrance Result",
-    date: "Date : 2 Days Ago",
-    url: "https://cdn3.digialm.com/EForms/configuredHtml/1936/87908/login.html",
-  },
-  {
-    title: "Chandigarh JBT Teacher Result 2024",
-    date: "Date : 3 Days Ago",
-    url: "https://www.sarkariresult.com/2024/chandigarh-jbt-teacher-06-2023/",
-  },
-  {
-    title: "UP CNET 2024 Result, Online Counseling",
-    date: "Date : 4 Days Ago",
-    url: "https://abvmucet2024.co.in/",
-  },
-  {
-    title: "UPCATET 2024 Entrance Exam Result",
-    date: "Date : 3 Days Ago",
-    url: "https://upcatet.org/frm_student_login.aspx",
-  },
-  {
-    title: "UIIC AO Final Result 2024",
-    date: "Date : 3 Days Ago",
-    url:
-      "https://uiic.co.in/sites/default/files/uploads/recruitment/LIST_OF_PROVISIONALLY_SHORTLISTED_CANDIDATES.pdf",
-  },
-  {
-    title: "UPSC CDS II 2023 OTA Final Result",
-    date: "Date : 4 Days Ago",
-    url: "https://www.sarkariresult.com/upsc/upsc-cds-ii-2023/",
-  },
-];
+const TopResultsHome = ({ data }) => {
+  if (!data || data.length === 0) {
+    return <Loading />; // Replace with your loading component
+  }
 
-const TopResultsHome = () => {
   return (
     <div className="pt-10 flex justify-center flex-col items-center">
       <div className="my-8">
@@ -69,20 +40,23 @@ const TopResultsHome = () => {
               delay: 2000,
             }),
           ]}
-          className="w-[320px] lg:w-full "
+          className="w-[320px] lg:w-full max-w-[900px]  md:ml-20  md:mr-20"
         >
           <CarouselContent>
-            {dummyData.map((data, index) => (
+            {data?.map((key, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex flex-col items-start justify-center  p-6">
-                      <a href={data.url} target="_main">
+                    <CardContent className="p-6">
+                      <a href={key.joburl} target="_main">
                         <h2 className="text-xl font-bold mb-2 text-[#25324B]">
-                          {data.title}
+                          {key.jobtitle.substring(0, 15)}
+                          {key.jobtitle.length > 15 && "..."}
                         </h2>
                       </a>
-                      <p className="text-center">{data.date}</p>
+                      <p className="flex items-center gap-2">
+                        click to view details <IoArrowForwardOutline />
+                      </p>
                     </CardContent>
                   </Card>
                 </div>

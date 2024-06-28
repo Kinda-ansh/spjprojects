@@ -50,11 +50,15 @@ const SarkariJob = ({ data }) => {
                 <div className="gap-5">
                   <div className="flex gap-3 items-center">
                     <p>Application Begin</p>
-                    <li className="text-gray-500 ml-auto">29/05/2024</li>
+                    <li className="text-gray-500 ml-auto">
+                      {key.applicationbegin || "Notify Soon"}
+                    </li>
                   </div>
                   <div className="flex gap-3 items-center">
                     <p>Last Date for Apply</p>
-                    <li className="text-gray-500 ml-auto">29/05/2024</li>
+                    <li className="text-gray-500 ml-auto">
+                      {key.lastdate || "Notify Soon"}
+                    </li>
                   </div>
                   <div className="flex gap-3 items-center">
                     <p>Exam / Merit List</p>
@@ -69,15 +73,22 @@ const SarkariJob = ({ data }) => {
                 <div className="gap-5">
                   <div className="flex gap-3 items-center">
                     <p>General / OBC / EWS Fees</p>
-                    <li className="text-gray-500 ml-auto">₹0/-</li>
+                    <li className="text-gray-500 ml-auto">
+                      {key.goefees || "₹0/-"}
+                    </li>
                   </div>
                   <div className="flex gap-3 items-center">
                     <p>SC / ST / PH</p>
-                    <li className="text-gray-500 ml-auto">₹0/-</li>
+                    <li className="text-gray-500 ml-auto">
+                      {" "}
+                      {key.scstphfees || "₹0/-"}
+                    </li>
                   </div>
                   <div className="flex gap-3 items-center">
-                    <p>Education</p>
-                    <li className="text-gray-500 ml-auto">10th pass</li>
+                    <p>Qualification</p>
+                    <li className="text-gray-500 ml-auto">
+                      {key.qualification || "Minimum 8th Pass"}
+                    </li>
                   </div>
                 </div>
               </div>

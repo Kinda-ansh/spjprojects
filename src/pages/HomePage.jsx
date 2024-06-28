@@ -53,7 +53,7 @@ const HomePage = () => {
 
         <div className="hidden lg:flex border-2 w-1/4">Advertisement</div>
       </div>
-      <TopResultsHome />
+      <TopResultsHome data={results} />
 
       <HomePageFullScreenAds />
       <AboutHome />
