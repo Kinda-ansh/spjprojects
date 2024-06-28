@@ -9,9 +9,10 @@ const JobMarquee = ({ data }) => {
             key={index}
             href={key.joburl}
             target="_main"
-            className="text-primary mx-4"
+            className="text-primary mx-3"
           >
-            {key.jobtitle} ||
+            {key.jobtitle}
+            <span className="text-black ml-5 "> ||</span>
           </a>
         ))}
       </marquee>
