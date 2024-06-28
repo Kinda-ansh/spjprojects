@@ -15,7 +15,7 @@ const NewsList = ({ data }) => {
           className="w-full mb-5  flex flex-wrap-reverse lg:flex-nowrap hover:bg-blue-100 rounded-md p-4 shadow-md cursor-pointer"
         >
           <div className="flex gap-5 flex-col">
-            <p className="text-primary">{key.postdate}</p>
+            <p className="text-primary">{key.timeAgo}</p>
             <h2 className="w-full text-2xl text-bold text-primary">
               {key.title}
             </h2>

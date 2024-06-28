@@ -30,7 +30,7 @@ const Common = ({ data }) => {
               </h2>
               <div className="flex gap-5">
                 <p>Posted date</p>
-                <li className="text-gray-500">12/06/2024</li>
+                <li className="text-gray-500">{key.postdate}</li>
               </div>
             </div>
           </div>
