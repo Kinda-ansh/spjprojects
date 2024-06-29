@@ -42,8 +42,7 @@ const AnswerKey = () => {
           All <span className="text-sarkari">Answer Key</span>
         </h1>
         <p className="text-lg text-center">
-          Here is the latest top Answer Key, these Answer Key coming from
-          sarkari result website.
+          Here is the latest top Answer Key.
         </p>
       </div>
 
@@ -54,12 +53,17 @@ const AnswerKey = () => {
             <p className="text-center">No data available</p>
           )}
           <Common data={data} />
-          {loading && <p className="text-center"> <Loading/> </p>}
+          {loading && (
+            <p className="text-center">
+              {" "}
+              <Loading />{" "}
+            </p>
+          )}
           {!loading && hasMore && (
             <div className="text-center my-4">
               <button
                 onClick={handleLoadMore}
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="bg-primary text-white px-4 py-2 rounded"
               >
                 Load More
               </button>

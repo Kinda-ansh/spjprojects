@@ -41,8 +41,7 @@ const PrivateJobs = () => {
           All <span className="text-sarkari">Private Jobs</span>
         </h1>
         <p className="text-lg text-center">
-          Here is the latest top Private Jobs, these Private Jobs coming from
-          sarkari result website.
+          Here is the latest top Private Jobs.
         </p>
       </div>
 
@@ -50,12 +49,17 @@ const PrivateJobs = () => {
         {/* data portion */}
         <div className="lg:w-3/4">
           <PrivateJob data={data} />
-          {loading && <p className="text-center"> <Loading/> </p>}
+          {loading && (
+            <p className="text-center">
+              {" "}
+              <Loading />{" "}
+            </p>
+          )}
           {!loading && hasMore && (
             <div className="text-center my-4">
               <button
                 onClick={handleLoadMore}
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="bg-primary text-white px-4 py-2 rounded"
               >
                 Load More
               </button>

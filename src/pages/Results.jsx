@@ -41,10 +41,7 @@ const Results = () => {
         <h1 className="text-3xl text-center font-semibold">
           All <span className="text-sarkari">Results</span>
         </h1>
-        <p className="text-lg text-center">
-          Here is the latest top results, these results coming from sarkari
-          result website.
-        </p>
+        <p className="text-lg text-center">Here is the latest top Results.</p>
       </div>
 
       <div className="w-full flex gap-5">
@@ -54,7 +51,11 @@ const Results = () => {
             <p className="text-center">No data available</p>
           )}
           <Common data={data} />
-          {loading && <p className="text-center"><Loading/></p>}
+          {loading && (
+            <p className="text-center">
+              <Loading />
+            </p>
+          )}
           {!loading && hasMore && (
             <div className="text-center my-4">
               <button

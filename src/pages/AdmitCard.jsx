@@ -43,8 +43,7 @@ const AdmitCard = () => {
             All <span className="text-sarkari">Admit Card</span>
           </h1>
           <p className="text-lg text-center">
-            Here is the latest top Admit Card, these Admit Card coming from
-            sarkari result website.
+            Here is the Latest top Admit Card.
           </p>
         </div>
 
@@ -64,7 +63,7 @@ const AdmitCard = () => {
               <div className="text-center my-4">
                 <button
                   onClick={handleLoadMore}
-                  className="bg-blue-500 text-white px-4 py-2 rounded"
+                  className="bg-primary text-white px-4 py-2 rounded"
                 >
                   Load More
                 </button>

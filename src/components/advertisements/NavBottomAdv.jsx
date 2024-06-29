@@ -6,11 +6,7 @@ import NavTop from "../../assets/navAdsbot.png";
 const NavBtmAdv = () => {
   return (
     <>
-      <a
-        href="https://sarkariprivatejobs.com/ywefg"
-        target="_main"
-        className="p-1"
-      >
+      <a href="/page-not-exist" target="_blank" className="p-1">
         <img src={NavTop} className="w-full" />
       </a>
     </>

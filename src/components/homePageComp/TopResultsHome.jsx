@@ -25,10 +25,7 @@ const TopResultsHome = ({ data }) => {
         <h1 className="text-3xl text-center font-semibold">
           Top <span className="text-sarkari">Results</span>
         </h1>
-        <p className="text-lg text-center">
-          Here is the latest top results, these results coming from sarkari
-          result website.
-        </p>
+        <p className="text-lg text-center">Here is the latest top results.</p>
       </div>
       <div className="ml-20 mr-20 ">
         <Carousel
@@ -48,7 +45,7 @@ const TopResultsHome = ({ data }) => {
                 <div className="p-1">
                   <Card>
                     <CardContent className="p-6">
-                      <a href={key.joburl} target="_main">
+                      <a href={key.joburl} target="_blank">
                         <h2 className="text-xl font-bold mb-2 text-[#25324B]">
                           {key.jobtitle.substring(0, 15)}
                           {key.jobtitle.length > 15 && "..."}

@@ -3,48 +3,46 @@ import ptvIcon from "../../assets/pvt.svg";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import Loading from "../loading/Loading";
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 const PrivateJobsHome = ({ data }) => {
   if (!data || data.length === 0) {
-    return <Loading />; // Replace with your loading component
+    return <Loading />;
   }
+
+  // Limit data to the first 10 items
+  const limitedData = data.slice(0, 12);
 
   return (
     <>
       <div className="">
-        <h1 className="text-2xl font-bold ">
-          Private <span className="text-primary">Jobs </span>
-        </h1>{" "}
-        {data?.map((key, index) => (
+        <h1 className="text-2xl font-bold">
+          Private <span className="text-primary">Jobs</span>
+        </h1>
+        {limitedData.map((key, index) => (
           <div key={index} className="mt-5">
-            <div className="w-full flex gap-5 cursor-pointer">
-              <div className=" w-full flex justify-between items-center ">
+            <div className="w-full flex gap-5">
+              <div className="w-full flex justify-between items-center">
                 <div className="flex gap-7 items-center">
                   <div
                     style={{ width: "50px", height: "50px" }}
                     className="flex justify-start items-center m-auto"
                   >
-                    {" "}
                     <img src={ptvIcon} alt="" width="45px" height="45px" />
                   </div>
                   <div>
-                    <h2 className="w-full text-lg text-bold ">
+                    <h2 className="w-full text-lg text-bold">
                       {key.jobtitle.substring(0, 40)}
                       {key.jobtitle.length > 40 && "..."}
                     </h2>
                     <div className="flex gap-3">
-                      <p className="text-gray-500">last date</p>
-                      <li className="text-gray-500">29/05/2024</li>
+                      <p className="text-gray-500">Last Date</p>
+                      <li className="text-gray-500">08/07/2024</li>
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-end ml-10 ">
+                <div className="flex justify-end ml-10">
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button
@@ -59,19 +57,17 @@ const PrivateJobsHome = ({ data }) => {
                         <h2 className="text-primary text-2xl">
                           {key.jobtitle}
                         </h2>
-                      
                         <p className="text-md">{key.jobdescription}</p>
                       </div>
-
-                      <div className="w-full items-start  gap-5">
+                      <div className="w-full items-start gap-5">
                         <div className="flex gap-3 items-center">
                           <p>Location</p>
                           <span className="text-gray-500 ml-auto">
-                          {key.joblocation}
+                            {key.joblocation}
                           </span>
                         </div>
                         <div className="flex gap-3 items-center">
-                          <p>salary</p>
+                          <p>Salary</p>
                           <span className="text-gray-500 ml-auto">
                             {key.salary}
                           </span>
@@ -83,7 +79,6 @@ const PrivateJobsHome = ({ data }) => {
                           </span>
                         </div>
                       </div>
-
                       <div className="w-full flex justify-center items-center mt-5">
                         <button className="border-primary text-primary hover:text-white border-2 px-5 rounded-md py-2 hover:bg-primary text-sm">
                           <a

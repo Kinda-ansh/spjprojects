@@ -38,11 +38,10 @@ const SarkariJobs = () => {
     <>
       <div className="my-8">
         <h1 className="text-3xl text-center font-semibold">
-          All <span className="text-sarkari">SarkariJobs</span>
+          All <span className="text-sarkari">Sarkari Jobs</span>
         </h1>
         <p className="text-lg text-center">
-          Here is the latest top SarkariJobs, these SarkariJobs coming from
-          sarkari result website.
+          Here is the latest top Sarkari Jobs.
         </p>
       </div>
 
@@ -58,7 +57,7 @@ const SarkariJobs = () => {
             <div className="text-center my-4">
               <button
                 onClick={handleLoadMore}
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="bg-primary text-white px-4 py-2 rounded"
               >
                 Load More
               </button>

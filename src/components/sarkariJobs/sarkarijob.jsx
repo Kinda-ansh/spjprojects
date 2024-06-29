@@ -93,15 +93,11 @@ const SarkariJob = ({ data }) => {
                 </div>
               </div>
               <div className="w-full flex justify-center items-center mt-10">
-                <button className="border-primary text-primary hover:text-white border-2 px-5 rounded-md py-2 hover:bg-primary text-sm">
-                  <a
-                    href={key.joburl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Apply Job
-                  </a>
-                </button>
+                <a href={key.joburl} target="_blank" rel="noopener noreferrer">
+                  <button className="border-primary text-primary hover:text-white border-2 px-5 rounded-md py-2 hover:bg-primary text-sm">
+                    Apply Now
+                  </button>
+                </a>
               </div>
             </AccordionContent>
           </AccordionItem>

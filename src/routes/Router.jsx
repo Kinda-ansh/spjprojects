@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import AppLayout from "../layout/Layout";
 import ErrorPage from "../pages/ErrorPage";
+import AdsBannerNavigation from "../components/advertisements/AdsBannerNavigation";
 
 // ================ 👇 importing component with LAZY 👇  =====================
 
@@ -40,6 +41,7 @@ const Router = ({ children }) => {
           <Route path="/contact-page" element={<ContactUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/page-not-exist" element={<AdsBannerNavigation />} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </>
