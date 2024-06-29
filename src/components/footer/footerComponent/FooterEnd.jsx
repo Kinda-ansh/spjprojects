@@ -9,6 +9,17 @@ const FooterEnd = () => {
           <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
             @ 2024 Sarkari Private Jobs. All Right Reserved.
           </p>
+          <p className=" text-sm text-gray-500 sm:order-first sm:mt-0">
+            Design and Developed by{" "}
+            <a
+              href="https://kindasolutions.com/"
+              className="font-bold text-primary"
+              target="_blank"
+            >
+              {" "}
+              Kinda Solutions Pvt Ltd.{" "}
+            </a>
+          </p>
         </div>
       </div>
     </LayoutWraper>
