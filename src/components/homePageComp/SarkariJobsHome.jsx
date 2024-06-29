@@ -11,24 +11,25 @@
 //     return <Loading />;
 //   }
 
+//   // Limit data to the first 10 items
+//   const limitedData = data.slice(0, 10);
+
 //   return (
 //     <>
 //       <div className="">
-//         <h1 className="text-2xl font-bold ">
-//           Sarkari <span className="text-primary">Jobs </span>
-//         </h1>{" "}
-//         {data?.map((key, index) => (
+//         <h1 className="text-2xl font-bold">
+//           Sarkari <span className="text-primary">Jobs</span>
+//         </h1>
+//         {limitedData.map((key, index) => (
 //           <div className="mt-5" key={index}>
-//             {" "}
-//             <div className="w-full flex gap-5 ">
-//               <div className=" w-full flex justify-between items-center">
+//             <div className="w-full flex gap-5">
+//               <div className="w-full flex justify-between items-center">
 //                 <div className="flex gap-5 items-top">
-//                   <div style={{ width: "50px", height: "50px" }}>
-//                     {" "}
-//                     <img src={sarkari} alt="" width="45px" height="45px" />
+//                   <div style={{ width: "full" }}>
+//                     <img src={sarkari} alt="" width="50px" height="50px" />
 //                   </div>
 //                   <div>
-//                     <h2 className="w-full text-lg text-bold ">
+//                     <h2 className="w-full text-lg text-bold">
 //                       {key.jobtitle.substring(0, 40)}
 //                       {key.jobtitle.length > 40 && "..."}
 //                     </h2>
@@ -38,7 +39,7 @@
 //                     </div>
 //                   </div>
 //                 </div>
-//                 <div className="flex justify-end ml-10 ">
+//                 <div className="flex justify-end ml-10">
 //                   <Dialog>
 //                     <DialogTrigger asChild>
 //                       <Button
@@ -54,15 +55,14 @@
 //                           {key.jobtitle}
 //                         </h2>
 //                       </div>
-
-//                       <div className="w-full items-start  gap-5">
+//                       <div className="w-full items-start gap-5">
 //                         <div className="flex gap-3 items-center">
 //                           <p>Application Begin</p>
 //                           <span className="text-gray-500 ml-auto">
 //                             {key.applicationbegin || "Notify Soon"}
 //                           </span>
 //                         </div>
-//                         <div className="flex gap-3 items-center ">
+//                         <div className="flex gap-3 items-center">
 //                           <p>Last Date for Apply</p>
 //                           <span className="text-gray-500 ml-auto">
 //                             {key.lastdate || "Notify Soon"}
@@ -80,7 +80,6 @@
 //                             {key.ageeligibility || "Notify Soon"}
 //                           </span>
 //                         </div>
-
 //                         <div className="flex gap-3 items-center">
 //                           <p>General / OBC / EWS Fees</p>
 //                           <span className="text-gray-500 ml-auto">
@@ -100,7 +99,6 @@
 //                           </span>
 //                         </div>
 //                       </div>
-
 //                       <div className="w-full flex justify-center items-center mt-5">
 //                         <button className="border-primary text-primary hover:text-white border-2 px-5 rounded-md py-2 hover:bg-primary text-sm">
 //                           <a
@@ -133,7 +131,7 @@
 
 // export default SarkariJobsHome;
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import sarkari from "../../assets/sarkari.svg";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -142,11 +140,22 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 const SarkariJobsHome = ({ data }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   if (!data || data.length === 0) {
     return <Loading />;
   }
 
-  // Limit data to the first 10 items
   const limitedData = data.slice(0, 10);
 
   return (
@@ -160,13 +169,13 @@ const SarkariJobsHome = ({ data }) => {
             <div className="w-full flex gap-5">
               <div className="w-full flex justify-between items-center">
                 <div className="flex gap-5 items-top">
-                  <div style={{ width: "50px", height: "50px" }}>
-                    <img src={sarkari} alt="" width="45px" height="45px" />
+                  <div style={{ width: "full" }}>
+                    <img src={sarkari} alt="" width="50px" height="50px" />
                   </div>
                   <div>
                     <h2 className="w-full text-lg text-bold">
-                      {key.jobtitle.substring(0, 40)}
-                      {key.jobtitle.length > 40 && "..."}
+                      {key.jobtitle.substring(0, isMobile ? 10 : 40)}
+                      {key.jobtitle.length > (isMobile ? 10 : 40) && "..."}
                     </h2>
                     <div className="flex gap-3">
                       <p className="text-gray-500">Last Date</p>
