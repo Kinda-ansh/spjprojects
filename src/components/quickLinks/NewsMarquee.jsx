@@ -12,11 +12,11 @@ const NewsMarquee = ({ data }) => {
             <a
               key={index}
               href={key.url}
-              target="_main"
+              target="_blank"
               className="text-primary mx-4"
             >
               {key.title}
-              <span className="text-black ml-5 "> ||</span>{" "}
+              <span className="text-black ml-5 "> || </span>{" "}
             </a>
           ))}
         </marquee>
@@ -25,7 +25,7 @@ const NewsMarquee = ({ data }) => {
             <a
               key={index}
               href={key.url}
-              target="_main"
+              target="_blank"
               className="text-primary mx-4"
             >
               {key.title} <span className="text-black ml-5 "> ||</span>{" "}

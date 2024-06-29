@@ -10,10 +10,7 @@ const AboutHome = () => {
         <h1 className="text-3xl text-center font-semibold">
           Read <span className="text-sarkari">About Us</span>
         </h1>
-        <p className="text-lg text-center">
-          Here is the about us part, these results coming from sarkari result
-          website.
-        </p>
+        <p className="text-lg text-center">Here is the About us.</p>
       </div>
       <div className="flex items-center gap-10 ">
         <div className="text-start text-xl">

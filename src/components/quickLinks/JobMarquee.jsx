@@ -8,7 +8,7 @@ const JobMarquee = ({ data }) => {
           <a
             key={index}
             href={key.joburl}
-            target="_main"
+            target="_blank"
             className="text-primary mx-3"
           >
             {key.jobtitle}

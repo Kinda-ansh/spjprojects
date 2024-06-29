@@ -1,5 +1,5 @@
 import React from "react";
-import homebnr2 from "../../assets/midHomeAds.png";
+import homebnr2 from "../../assets/homeFull.png";
 
 const HomePageFullScreenAds = () => {
   return (

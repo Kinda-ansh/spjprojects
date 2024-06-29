@@ -10,8 +10,7 @@ const AboutUs = () => {
             Read <span className="text-sarkari">About Us</span>
           </h1>
           <p className="text-lg text-center">
-            Here is the about us part, these results coming from sarkari result
-            website.
+            Here is the About Us, Read and understand that what we do.
           </p>
         </div>
         <div className="text-start text-xl">
