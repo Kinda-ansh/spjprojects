@@ -6,6 +6,7 @@ import Loading from "../loading/Loading";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
+0;
 const PrivateJobsHome = ({ data }) => {
   if (!data || data.length === 0) {
     return <Loading />;

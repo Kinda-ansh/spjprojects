@@ -8,6 +8,7 @@ const AnswerKey = () => {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const fetchAnswerKeys = async (page) => {
     try {
