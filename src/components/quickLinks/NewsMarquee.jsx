@@ -4,7 +4,7 @@ const NewsMarquee = ({ data }) => {
   return (
     <>
       <h1 className="text-center text-4xl font-bold">
-        Latest <span className="text-primary">Articles </span>
+        Latest <span className="text-primary">Items </span>
       </h1>
       <div className="pt-5">
         <marquee className="flex" loop="6">

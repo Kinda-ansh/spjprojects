@@ -7,7 +7,9 @@ import contact from "../assets/contact.jpg";
 const ContactUs = () => {
   return (
     <div>
-      <Contactmain />
+      <LayoutWraper>
+        <Contactmain />
+      </LayoutWraper>
     </div>
   );
 };
