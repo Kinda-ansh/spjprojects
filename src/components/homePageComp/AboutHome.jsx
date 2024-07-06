@@ -35,7 +35,7 @@ const AboutHome = () => {
           most trusted and comprehensive job portal, known for our commitment to
           accuracy, reliability, and user satisfaction.
         </div>
-        <div className="w-full">
+        <div className="w-full  hidden md:block">
           <img src={man} alt="" className=" " />
         </div>
       </div>

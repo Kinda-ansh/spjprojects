@@ -30,16 +30,15 @@ const CardsArray1 = () => {
   const limitedData = data.slice(4, 8);
 
   return (
-    <div className=" flex gap-3 p-3 0  min-w-fit ">
+    <div className="flex gap-5 p-3 min-w-fit">
       {limitedData?.map((key) => (
         <div
           key={key.id}
           className={
-            "border border-gray-300 rounded-lg p-4 text-center shadow-lg w-full overflow-hidden flex flex-col justify-between hover:shadow-2xl"
+            "card border hover:bg-gray-200 border-gray-300 rounded-lg p-4 text-center shadow-lg w-full overflow-hidden flex flex-col justify-between transition-transform duration-300 ease-in-out hover:shadow-2xl hover:scale-105"
           }
         >
-          <h3 className="text-xl font-bold mb-2 ">
-            {" "}
+          <h3 className="text-xl font-bold mb-2">
             {key.title.substring(0, 20)}
             {key.title.length > 20 && "..."}
           </h3>
@@ -47,7 +46,7 @@ const CardsArray1 = () => {
             <DialogTrigger asChild>
               <Button
                 variant="outline"
-                className="border-primary text-primary hover:text-primary  text-white border-2 bg-primary text-sm"
+                className="border-primary text-primary hover:text-primary text-white border-2 bg-primary text-sm"
               >
                 View
               </Button>

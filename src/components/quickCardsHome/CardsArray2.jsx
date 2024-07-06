@@ -30,12 +30,12 @@ const CardsArray2 = () => {
   const limitedData = data.slice(0, 4);
 
   return (
-    <div className=" flex gap-3 p-3 0  min-w-fit ">
+    <div className=" flex gap-5 p-3 0  min-w-fit ">
       {limitedData?.map((key) => (
         <div
           key={key.id}
           className={
-            "border border-gray-300 rounded-lg p-4 text-center shadow-lg w-full overflow-hidden flex flex-col justify-between hover:shadow-2xl"
+            "card border hover:bg-gray-200 border-gray-300 rounded-lg p-4 text-center shadow-lg w-full overflow-hidden flex flex-col justify-between transition-transform duration-300 ease-in-out hover:shadow-2xl hover:scale-105"
           }
         >
           <h3 className="text-xl font-bold mb-2 ">
