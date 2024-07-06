@@ -6,7 +6,7 @@ import NavTop from "../../assets/NavTop.png";
 const NavTopAdv = () => {
   return (
     <>
-      <Link className="p-1">
+      <Link className="p-1  min-w-fit">
         <img src={`${NavTop}`} className="w-full" />
       </Link>
     </>

@@ -12,8 +12,8 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="bg-primary w-full">
-      <div className="w-full">
+    <nav className="bg-primary">
+      <div className=" w-full">
         <div className="flex items-center justify-between h-20 px-5 w-full">
           <div className="flex-shrink-0">
             <Link className="p-5">

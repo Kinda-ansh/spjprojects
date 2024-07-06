@@ -12,7 +12,7 @@ const AboutHome = () => {
         </h1>
         <p className="text-lg text-center">Here is the About us.</p>
       </div>
-      <div className="flex items-center gap-10 flex-wrap lg:flex-nowrap">
+      <div className="flex items-center gap-10 ">
         <div className="text-start text-xl">
           <p>
             Welcome to Sarkari Private Jobs, your one-stop destination for the

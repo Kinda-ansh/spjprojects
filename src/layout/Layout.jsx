@@ -9,9 +9,12 @@ import NavTopAdv from "../components/advertisements/NavTopAdv";
 
 const AppLayout = () => {
   return (
-    <LayoutWraper className="">
-      <NavTopAdv />
-      <Navbar />
+    <div className=" min-w-fit px-5 m-auto ">
+      <LayoutWraper>
+        <NavTopAdv />
+
+        <Navbar />
+      </LayoutWraper>
 
       {/* <Carousel /> */}
 
@@ -21,8 +24,10 @@ const AppLayout = () => {
       <ScrollRestoration />
 
       {/* </LayoutWraper> */}
-      <Footer />
-    </LayoutWraper>
+      <LayoutWraper>
+        <Footer />
+      </LayoutWraper>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SarkariJob from "../components/sarkariJobs/sarkarijob";
 import axiosInstance from "../utils/axiosConfig";
+import LayoutWraper from "../layout/LayoutWraper";
 
 const SarkariJobs = () => {
   const [data, setData] = useState([]);
@@ -36,40 +37,42 @@ const SarkariJobs = () => {
 
   return (
     <>
-      <div className="my-8">
-        <h1 className="text-3xl text-center font-semibold">
-          All <span className="text-sarkari">Sarkari Jobs</span>
-        </h1>
-        <p className="text-lg text-center">
-          Here is the latest top Sarkari Jobs.
-        </p>
-      </div>
-
-      <div className="w-full flex gap-5">
-        {/* data portion */}
-        <div className="lg:w-3/4">
-          {data.length === 0 && !loading && !hasMore && (
-            <p className="text-center">No data available</p>
-          )}
-          <SarkariJob data={data} />
-          {loading && <p className="text-center">Loading...</p>}
-          {!loading && hasMore && (
-            <div className="text-center my-4">
-              <button
-                onClick={handleLoadMore}
-                className="bg-primary text-white px-4 py-2 rounded"
-              >
-                Load More
-              </button>
-            </div>
-          )}
-          {!loading && !hasMore && data.length > 0 && (
-            <p className="text-center">No more data available</p>
-          )}
+      <LayoutWraper>
+        <div className="my-8">
+          <h1 className="text-3xl text-center font-semibold">
+            All <span className="text-sarkari">Sarkari Jobs</span>
+          </h1>
+          <p className="text-lg text-center">
+            Here is the latest top Sarkari Jobs.
+          </p>
         </div>
-        {/* advertisement partion.. hidden on small screen */}
-        <div className="hidden lg:flex border-2 w-1/4 h-100"></div>
-      </div>
+
+        <div className="w-full flex gap-5">
+          {/* data portion */}
+          <div className="lg:w-3/4">
+            {data.length === 0 && !loading && !hasMore && (
+              <p className="text-center">No data available</p>
+            )}
+            <SarkariJob data={data} />
+            {loading && <p className="text-center">Loading...</p>}
+            {!loading && hasMore && (
+              <div className="text-center my-4">
+                <button
+                  onClick={handleLoadMore}
+                  className="bg-primary text-white px-4 py-2 rounded"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+            {!loading && !hasMore && data.length > 0 && (
+              <p className="text-center">No more data available</p>
+            )}
+          </div>
+          {/* advertisement partion.. hidden on small screen */}
+          <div className="hidden lg:flex border-2 w-1/4 h-100"></div>
+        </div>
+      </LayoutWraper>
     </>
   );
 };

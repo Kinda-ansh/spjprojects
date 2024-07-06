@@ -69,6 +69,7 @@ import NewsList from "../components/latestNews/NewsList";
 import newsAds from "../assets/newAds.png";
 import axiosInstance from "../utils/axiosConfig";
 import Loading from "../components/loading/Loading";
+import LayoutWraper from "../layout/LayoutWraper";
 
 const LatestNews = () => {
   const [data, setData] = useState([]);
@@ -104,61 +105,63 @@ const LatestNews = () => {
 
   return (
     <>
-      <div className="my-8">
-        <img src={newsAds} alt="news page ads" />
+      <LayoutWraper>
         <div className="my-8">
-          <h1 className="text-3xl text-center font-semibold">
-            Trendy <span className="text-sarkari">Latest News</span>
-          </h1>
-          <p className="text-lg text-center">
-            Here is the Top trending News, Read and be aware of the trend.
-          </p>
-        </div>
-      </div>
-
-      <div className="w-full flex gap-5">
-        <div className="lg:w-3/4">
-          {data.length === 0 && !loading && !hasMore && (
-            <p className="text-center">No data available</p>
-          )}
-          <NewsList data={data} />
-          {loading && (
-            <p className="text-center">
-              <Loading />
+          <img src={newsAds} alt="news page ads" />
+          <div className="my-8">
+            <h1 className="text-3xl text-center font-semibold">
+              Trendy <span className="text-sarkari">Latest News</span>
+            </h1>
+            <p className="text-lg text-center">
+              Here is the Top trending News, Read and be aware of the trend.
             </p>
-          )}
-          {!loading && hasMore && (
-            <div className="text-center my-4">
-              <button
-                onClick={handleLoadMore}
-                className="bg-primary text-white px-4 py-2 rounded"
-              >
-                Load More
-              </button>
-            </div>
-          )}
-          {!loading && !hasMore && data.length > 0 && (
-            <p className="text-center">No more data available</p>
-          )}
-        </div>
-
-        <div className="hidden lg:flex border-2 w-1/4">
-          <div className="w-full gap-10">
-            <div
-              className="border-2 w-full mb-2"
-              style={{ height: "200px" }}
-            ></div>
-            <div
-              className="border-2 w-full mb-2"
-              style={{ height: "200px" }}
-            ></div>
-            <div
-              className="border-2 w-full mb-2"
-              style={{ height: "200px" }}
-            ></div>
           </div>
         </div>
-      </div>
+
+        <div className="w-full flex gap-5">
+          <div className="lg:w-3/4">
+            {data.length === 0 && !loading && !hasMore && (
+              <p className="text-center">No data available</p>
+            )}
+            <NewsList data={data} />
+            {loading && (
+              <p className="text-center">
+                <Loading />
+              </p>
+            )}
+            {!loading && hasMore && (
+              <div className="text-center my-4">
+                <button
+                  onClick={handleLoadMore}
+                  className="bg-primary text-white px-4 py-2 rounded"
+                >
+                  Load More
+                </button>
+              </div>
+            )}
+            {!loading && !hasMore && data.length > 0 && (
+              <p className="text-center">No more data available</p>
+            )}
+          </div>
+
+          <div className="hidden lg:flex border-2 w-1/4">
+            <div className="w-full gap-10">
+              <div
+                className="border-2 w-full mb-2"
+                style={{ height: "200px" }}
+              ></div>
+              <div
+                className="border-2 w-full mb-2"
+                style={{ height: "200px" }}
+              ></div>
+              <div
+                className="border-2 w-full mb-2"
+                style={{ height: "200px" }}
+              ></div>
+            </div>
+          </div>
+        </div>
+      </LayoutWraper>
     </>
   );
 };
